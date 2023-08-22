@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Admissions Enrollment Form - LTT Murunwa School of Excellence</title>
+
+		<!-- Styling -->
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+		<link rel="stylesheet" href="./css/jquery-steps.css" />
+		<link rel="stylesheet" href="./css/custom-style.css" />
+		<link rel="stylesheet" href="./css/loader.css" />
+	</head>
+
+	<body>
+		<section id="loader">
+			<div class="load-container">
+				<div class="linespinner"></div>
+			</div>
+		</section>
+
+		<header id="main-header">
+			<div class="container">
+				<img
+					src="https://onboarding.lttmurunwa.co.za/wp-content/uploads/2022/11/ee26f92a92abd124b65941c3bcd85fef.png"
+					alt="" />
+				<h2>Student Application Form</h2>
+			</div>
+		</header>
+
+		<section class="main-content">
+			<div class="container">
+				<div id="application-form" class="form-horizontal form-wizard-wrapper mb-3">
+					<!-- Basics -->
+					<h3>Basics</h3>
+					<fieldset>
+						<h4>Basics</h4>
+						<form action="" id="basic-form">
+							<div class="row">
+								<div class="form-group col-12 mb-2">
+									<label for="academic_year">Academic Year*</label>
+									<select class="form-control" id="academic_year" name="academic_year">
+										<option value="" disabled selected>Select Year</option>
+										<option value="2022">2022</option>
+										<option value="2023">2023</option>
+										<option value="2024">2024</option>
+										<option value="2025">2025</option>
+									</select>
+								</div>
+								<div class="form-group col-12 mb-2">
+									<label for="current_grade">Current Grade*</label>
+									<select class="form-control" id="current_grade" name="current_grade">
+										<option value="" disabled selected>Select Grade</option>
+										<option value="NA">Not Applicable</option>
+										<option value="grade-pre-r">Grade Pre-R</option>
+										<option value="grade-r">Grade R</option>
+										<option value="grade-1">Grade 1</option>
+										<option value="grade-2">Grade 2</option>
+										<option value="grade-3">Grade 3</option>
+										<option value="grade-4">Grade 4</option>
+										<option value="grade-5">Grade 5</option>
+										<option value="grade-6">Grade 6</option>
+										<option value="grade-7">Grade 7</option>
+										<option value="grade-8">Grade 8</option>
+										<option value="grade-9">Grade 9</option>
+										<option value="grade-10">Grade 10</option>
+										<option value="grade-11">Grade 11</option>
+										<option value="grade-12">Grade 12</option>
+									</select>
+								</div>
+								<div class="form-group col-12 mb-2">
+									<label for="applyling_for_grade">Applying For Grade*</label>
+									<select class="form-control" id="applyling_for_grade" name="applyling_for_grade">
+										<option value="" disabled selected>Select Grade</option>
+										<option value="grade-pre-r">Grade Pre-R</option>
+										<option value="grade-r">Grade R</option>
+										<option value="grade-1">Grade 1</option>
+										<option value="grade-2">Grade 2</option>
+										<option value="grade-3">Grade 3</option>
+										<option value="grade-4">Grade 4</option>
+										<option value="grade-5">Grade 5</option>
+										<option value="grade-6">Grade 6</option>
+										<option value="grade-7">Grade 7</option>
+										<option value="grade-8">Grade 8</option>
+										<option value="grade-9">Grade 9</option>
+										<option value="grade-10">Grade 10</option>
+										<option value="grade-11">Grade 11</option>
+										<option value="grade-12">Grade 12</option>
+									</select>
+								</div>
+							</div>
+						</form>
+
+						<div class="d-flex justify-content-end mt-3">
+							<button type="button" class="my-btn" id="basic-submit-button">Next</button>
+						</div>
+					</fieldset>
+
+					<!-- Profile -->
+					<h3>Profile</h3>
+					<fieldset>
+						<h4>Profile</h4>
+						<form action="" id="profile-form">
+							<div class="row">
+								<div class="form-group col-md-12 mb-3">
+									<label for="learner_first_name">Learner First Name*</label>
+									<input
+										type="text"
+										class="form-control"
+										id="learner_first_name"
+										name="learner_first_name"
+										placeholder="Learner First Name" />
+								</div>
+								<div class="form-group col-md-12 mb-3">
+									<label for="learner_middle_name">Learner Middle Name</label>
+									<input
+										type="text"
+										class="form-control"
+										id="learner_middle_name"
+										name="learner_middle_name"
+										placeholder="Learner Middle Name" />
+								</div>
+								<div class="form-group col-md-12 mb-3">
+									<label for="learner_last_name">Learner Last Name*</label>
+									<input
+										type="text"
+										class="form-control"
+										id="learner_last_name"
+										name="learner_last_name"
+										placeholder="Learner Last Name" />
+								</div>
+								<div class="form-group col-12 mb-3">
+									<label for="learner_gender">Gender*</label>
+									<select class="form-control" id="learner_gender" name="learner_gender">
+										<option value="" disabled selected>Learner Gender*</option>
+										<option disabled selected>Select</option>
+										<option value="Male">Male</option>
+										<option value="Female">Female</option>
+										<option value="Others">Others</option>
+									</select>
+								</div>
+								<div class="form-group col-md-12 mb-3">
+									<label for="learner_dob">Learner Date of Birth*</label>
+									<input
+										type="date"
+										class="form-control"
+										id="learner_dob"
+										name="learner_dob"
+										placeholder="Learner Date of Birth" />
+								</div>
+								<div class="form-group col-md-12 mb-3">
+									<label for="learner_previous_terminal_report">Learner's Previous Terminal Report</label>
+									<input
+										type="file"
+										class="form-control"
+										id="learner_previous_terminal_report"
+										name="learner_previous_terminal_report"
+										placeholder="Learner's Previous Terminal Report" />
+								</div>
+								<div class="form-group col-md-12 mb-3">
+									<label for="learner_email">Learner Email</label>
+									<input
+										type="email"
+										class="form-control"
+										id="learner_email"
+										name="learner_email"
+										placeholder="Learner Email" />
+								</div>
+								<div class="form-group col-md-12 mb-3">
+									<label for="learner_mobile">Learner Mobile</label>
+									<input
+										type="text"
+										class="form-control"
+										id="learner_mobile"
+										name="learner_mobile"
+										placeholder="Learner Mobile" />
+								</div>
+								<div class="d-flex justify-content-between mt-3">
+									<button type="button" class="my-btn" onclick="stepsWizard.steps('previous')">Previous</button>
+									<button type="button" class="my-btn" id="profile-submit-button">Next</button>
+								</div>
+							</div>
+						</form>
+					</fieldset>
+
+					<!-- Parent 1 Details -->
+					<h3>Parent 1 Details</h3>
+					<fieldset>
+						<h4>Parent 1 Details</h4>
+						<form action="" id="parent1-form">
+							<div class="row">
+								<div class="form-group col-md-12 mb-3">
+									<label for="parent1_first_name">Parent 1 First Name*</label>
+									<input
+										type="text"
+										class="form-control"
+										id="parent1_first_name"
+										name="parent1_first_name"
+										placeholder="Parent 1 First Name" />
+								</div>
+								<div class="form-group col-md-12 mb-3">
+									<label for="parent1_last_name">Parent 1 Last Name*</label>
+									<input
+										type="text"
+										class="form-control"
+										id="parent1_last_name"
+										name="parent1_last_name"
+										placeholder="Parent 1 Last Name" />
+								</div>
+								<div class="form-group col-md-12 mb-3">
+									<label for="parent1_email">Parent 1 Email</label>
+									<input
+										type="email"
+										class="form-control"
+										id="parent1_email"
+										name="parent1_email"
+										placeholder="Parent 1 Email" />
+								</div>
+								<div class="form-group col-md-12 mb-3">
+									<label for="parent1_mobile">Parent 1 Mobile*</label>
+									<input
+										type="text"
+										class="form-control"
+										id="parent1_mobile"
+										name="parent1_mobile"
+										placeholder="Parent 1 Mobile" />
+								</div>
+								<div class="form-group col-md-12 mb-3">
+									<label for="parent1_occupation">Parent 1 Occupation</label>
+									<input
+										type="text"
+										class="form-control"
+										id="parent1_occupation"
+										name="parent1_occupation"
+										placeholder="Parent 1 Occupation" />
+								</div>
+								<div class="form-group col-md-12 mb-3">
+									<label for="parent1_nid">Parent 1 National ID Number (NID)</label>
+									<input
+										type="text"
+										class="form-control"
+										id="parent1_nid"
+										name="parent1_nid"
+										placeholder="Parent 1 National ID Number" />
+								</div>
+								<div class="form-group col-md-12 mb-3">
+									<label for="parent1_nid_document">Parent 1 NID Document</label>
+									<input
+										type="file"
+										class="form-control"
+										id="parent1_nid_document"
+										name="parent1_nid_document"
+										placeholder="Parent 1 National ID Document" />
+								</div>
+								<div class="form-group col-md-12 mb-3">
+									<label for="parent1_dob">Parent 1 Date of Birth</label>
+									<input
+										type="date"
+										class="form-control"
+										id="parent1_dob"
+										name="parent1_dob"
+										placeholder="Parent 1 DOB" />
+								</div>
+								<div class="d-flex justify-content-between mt-3">
+									<button type="button" class="my-btn" onclick="stepsWizard.steps('previous')">Previous</button>
+									<button type="button" class="my-btn" id="parent1-submit-button">Next</button>
+								</div>
+							</div>
+						</form>
+					</fieldset>
+
+					<!-- Parent 2 Details -->
+					<h3>Parent 2 Details</h3>
+					<fieldset>
+						<h4>Parent 2 Details</h4>
+						<form action="" id="parent2-form">
+							<div class="row">
+								<div class="form-group col-md-12 mb-3">
+									<label for="parent2_first_name">Parent 2 First Name</label>
+									<input
+										type="text"
+										class="form-control"
+										id="parent2_first_name"
+										name="parent2_first_name"
+										placeholder="Parent 2 First Name" />
+								</div>
+								<div class="form-group col-md-12 mb-3">
+									<label for="parent2_last_name">Parent 2 Last Name</label>
+									<input
+										type="text"
+										class="form-control"
+										id="parent2_last_name"
+										name="parent2_last_name"
+										placeholder="Parent 2 Last Name" />
+								</div>
+								<div class="form-group col-md-12 mb-3">
+									<label for="parent2_email">Parent 2 Email</label>
+									<input
+										type="email"
+										class="form-control"
+										id="parent2_email"
+										name="parent2_email"
+										placeholder="Parent 2 Email" />
+								</div>
+								<div class="form-group col-md-12 mb-3">
+									<label for="parent2_mobile">Parent 2 Mobile</label>
+									<input
+										type="text"
+										class="form-control"
+										id="parent2_mobile"
+										name="parent2_mobile"
+										placeholder="Parent 2 Mobile" />
+								</div>
+								<div class="form-group col-md-12 mb-3">
+									<label for="parent2_occupation">Parent 2 Occupation</label>
+									<input
+										type="text"
+										class="form-control"
+										id="parent2_occupation"
+										name="parent2_occupation"
+										placeholder="Parent 2 Occupation" />
+								</div>
+								<div class="form-group col-md-12 mb-3">
+									<label for="parent2_nid">Parent 2 National ID Number (NID)</label>
+									<input
+										type="text"
+										class="form-control"
+										id="parent2_nid"
+										name="parent2_nid"
+										placeholder="Parent 2 National ID Number" />
+								</div>
+								<div class="form-group col-md-12 mb-3">
+									<label for="parent2_dob">Parent 2 Date of Birth</label>
+									<input
+										type="date"
+										class="form-control"
+										id="parent2_dob"
+										name="parent2_dob"
+										placeholder="Parent 2 DOB" />
+								</div>
+								<div class="d-flex justify-content-between mt-3">
+									<button type="button" class="my-btn" onclick="stepsWizard.steps('previous')">Previous</button>
+									<button type="button" class="my-btn" id="parent2-submit-button">Next</button>
+								</div>
+							</div>
+						</form>
+					</fieldset>
+
+					<!-- Documents -->
+					<h3>Documents</h3>
+					<fieldset>
+						<h4>Documents</h4>
+						<form action="" id="document-form">
+							<div class="row">
+								<div class="form-group col-md-12 mb-3">
+									<label for="learner_address">Learner Address</label>
+									<textarea class="form-control" name="learner_address" id="learner_address"></textarea>
+								</div>
+								<div class="form-group col-md-12 mb-3">
+									<label for="learner_photo">Learner Photo</label>
+									<input
+										type="file"
+										class="form-control"
+										id="learner_photo"
+										name="learner_photo"
+										placeholder="Learner Photo" />
+								</div>
+								<div class="form-group col-md-12 mb-3">
+									<label for="learner_birth_cirtificate">Learner Birth Cirtificate</label>
+									<input
+										type="file"
+										class="form-control"
+										id="learner_birth_cirtificate"
+										name="learner_birth_cirtificate"
+										placeholder="Learner Birth Cirtificate" />
+								</div>
+								<div class="form-group col-md-12 mb-3">
+									<label for="other_document">Other Document</label>
+									<input
+										type="file"
+										class="form-control"
+										id="other_document"
+										name="other_document"
+										placeholder="Other Document" />
+								</div>
+								<div class="d-flex justify-content-between mt-3">
+									<button type="button" class="my-btn" onclick="stepsWizard.steps('previous')">Previous</button>
+									<button type="button" class="my-btn" id="document-submit-button">Submit</button>
+								</div>
+							</div>
+						</form>
+					</fieldset>
+				</div>
+			</div>
+		</section>
+
+		<footer class="mt-5 bg-dark py-3">
+			<div class="container">
+				<p class="text-center text-white mb-0">©2022 NextSchool Digital. All Rights Reserved.</p>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+		<script>
+			$(function () {
+				stepsWizard = $('#application-form').steps({
+					headerTag: 'h3',
+					bodyTag: 'fieldset',
+					contentContainerTag: 'div',
+					enableFinishButton: false,
+					enablePagination: false,
+					enableAllSteps: false,
+				})
+			})
+
+			$(document).on('click', '#basic-submit-button', function () {
+				let validate = $('#basic-form').validate({
+					submitHandler: form => $(form).ajaxSubmit(),
+					rules: {
+						academic_year: { required: true },
+						current_grade: { required: true },
+						applyling_for_grade: { required: true },
+					},
+				})
+				if ($('#basic-form').valid()) {
+					stepsWizard.steps('next')
+				}
+			})
+
+			$(document).on('click', '#profile-submit-button', function () {
+				let validate = $('#profile-form').validate({
+					submitHandler: form => $(form).ajaxSubmit(),
+					rules: {
+						learner_first_name: { required: true },
+						learner_last_name: { required: true },
+						learner_gender: { required: true },
+						learner_dob: { required: true },
+						learner_mobile: { number: true },
+					},
+				})
+				if ($('#profile-form').valid()) {
+					stepsWizard.steps('next')
+				}
+			})
+
+			$(document).on('click', '#parent1-submit-button', function () {
+				let validate = $('#parent1-form').validate({
+					submitHandler: form => $(form).ajaxSubmit(),
+					rules: {
+						parent1_first_name: { required: true },
+						parent1_last_name: { required: true },
+						parent1_mobile: { required: true, number: true },
+					},
+				})
+				if ($('#parent1-form').valid()) {
+					stepsWizard.steps('next')
+				}
+			})
+
+			$(document).on('click', '#parent2-submit-button', function () {
+				let validate = $('#parent2-form').validate({
+					submitHandler: form => $(form).ajaxSubmit(),
+					rules: {},
+				})
+				if ($('#parent2-form').valid()) {
+					stepsWizard.steps('next')
+				}
+			})
+
+			$(document).on('click', '#document-submit-button', function () {
+				let validate = $('#document-form').validate({
+					submitHandler: form => $(form).ajaxSubmit(),
+					rules: {},
+				})
+				if ($('#document-form').valid()) {
+					stepsWizard.steps('next')
+					sendDataOnNetwork()
+				}
+			})
+
+			// Call Your API Here
+			function sendDataOnNetwork() {
+				const formData = new FormData()
+				const nonFileFields = Array.from(document.querySelectorAll('.form-control:not([type="file"])'))
+				const fileFields = Array.from(document.querySelectorAll('.form-control[type="file"]'))
+
+				nonFileFields.forEach(filed => formData.append(filed.name, filed.value))
+				fileFields.forEach(field => field.files.length && formData.append(field.name, field.files[0]))
+
+				const res = Object.fromEntries(formData)
+				const payload = JSON.stringify(res)
+
+				console.log(res)
+				console.log(payload)
+
+				let formData2 = {}
+				for (let key of formData.entries()) {
+					formData2[key[0]] = key[1]
+				}
+				console.log(formData2)
+
+				// console.log(key[0], key[1]);
+
+				// const fields = Array.from(document.querySelectorAll('.form-control'));
+				// let studentData = fields.reduce((data, field) => ({ ...data, [field.name]: field.value }), {})
+
+				// console.log(formData);
+
+				// const filesDataObj = fileFields.reduce((data, field) => ({ ...data, [field.name]: field.files[0] }), {});
+				// const filesDataArray = Array.from(fileFields, field => field.files[0]);
+			}
+
+			// Loader Animation
+			window.addEventListener('load', () => {
+				setTimeout(() => {
+					document.querySelector('#loader').classList.add('hide')
+				}, 500)
+			})
+		</script>
+	</body>
+</html>
